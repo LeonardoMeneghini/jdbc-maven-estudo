@@ -1,4 +1,6 @@
-package com.lzm.jdbc.lzm.entity;
+package one.digitalinnovation.jdbc.entity;
+
+import java.util.List;
 
 public class Cliente {
     private Integer id;
@@ -46,4 +48,3 @@ public class Cliente {
                 '}';
     }
 }
-

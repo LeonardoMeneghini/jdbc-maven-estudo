@@ -1,11 +1,8 @@
-package com.lzm.jdbc.lzm.dao;
+package one.digitalinnovation.jdbc.dao;
 
-import com.lzm.jdbc.lzm.entity.Cliente;
+import one.digitalinnovation.jdbc.entity.Cliente;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,11 +15,11 @@ public class ClienteDAO {
 
 
 
-    public List<Cliente> buscarTodosClientes() throws SQLException{
+    public List<Cliente> buscarTodosOsClientes() throws SQLException {
         String SQL = "SELECT * FROM tb_cliente";
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         ResultSet resultSet = preparedStatement.executeQuery();
-        List<Cliente> clientes = new ArrayList<> ();
+        List<Cliente> clientes = new ArrayList<>();
         while (resultSet.next()){
             Cliente cliente = new Cliente();
             cliente.setId(resultSet.getInt("id"));
